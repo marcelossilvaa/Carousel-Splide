@@ -32,11 +32,16 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #333;
-  color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
+}
+
+.prev-btn{
+  margin-left: 30px;
+}
+.next-btn{
+  margin-right: 30px;
 }
 
 //Buttons
