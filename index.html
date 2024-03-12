@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Splide.JS Auto Scroll Carousel / Slider</title>
+  <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+<link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='app'>
+  <section class="splide" aria-label="Basic Structure Example">
+    <button class="nav-btn prev-btn" id="prevBtn">Anterior</button>
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <div class="block ">
+              <p class="card-title">Lorem ipsum dolor </p>
+              <p class="card-subtitle">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <div class="container-card-infos">
+                <img src="Ellipse 95.png" class="image-card" alt="">
+                <div class="card-infos-content">
+                  <p class="card-infos-content-title">Lorem ipsum dolor sit </p>
+                  <p class="card-infos-content-subtitle">Lorem ipsum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 02</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 03</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 04</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 05</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 6</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 7</h1>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <h1>Slide 8</h1>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="nav-btn next-btn" id="nextBtn">Próximo</button>
+  </section>
+  (Hover for Info)
+</div>
+<div class='app'>
+  
+</div>
+  <script  src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide(".splide", {
+        type: "loop",
+        arrows: false,
+        pagination: false,
+        focus: "center",
+        gap: "1em",
+        perPage: 3.5,
+        breakpoints: {
+          600: {
+            perPage: 1,
+          },
+          800: {
+            perPage: 1,
+          },
+          1200: {
+            perPage: 4,
+          },
+        },
+      }).mount();
+
+      document.getElementById('prevBtn').addEventListener('click', function () {
+        splide.go('-');
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', function () {
+        splide.go('+');
+      });
+    });
+  </script>
+</body>
+</html>
